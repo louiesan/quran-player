@@ -70,22 +70,22 @@ let suwar = [
   {
     name: "Al-Ahzab",
     reciter: "Badre Al-Turki",
-    file: "suwar/ahzab.mp3",
+    file: "/suwar/ahzab.mp3",
   },
   {
     name: "Nuh",
     reciter: "Badre Al-Turki",
-    file: "suwar/noah.mp3",
+    file: "/suwar/noah.mp3",
   },
   {
     name: "Qaf",
     reciter: "Nasser Al-Qatami",
-    file: "suwar/qaf.mp3",
+    file: "/suwar/qaf.mp3",
   },
   {
     name: "Al-Anbiyaa",
     reciter: "Mohamed El-Menshawi",
-    file: "suwar/anbya.mp3",
+    file: "/suwar/anbya.mp3",
   },
 ];
 
