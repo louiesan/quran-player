@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: system-ui;
+  font-weight: bold;
+  color: beige;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+audio {
+  width: 100%;
+}
+
+i:hover {
+  filter: brightness(1.5);
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(50px);
+}
+
+.background img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: blur(10px);
+  object-fit: cover;
+  transform: scale(1.1);
+  -webkit-filter: blur(10px);
+}
+
+.header {
+  margin-bottom: 50px;
+  text-align: center;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  color: black;
+  justify-content: space-between;
+  align-items: center;
+  justify-self: start;
+  padding: 0px 10px;
+  position: relative;
+}
+
+.container {
+  margin-bottom: 50px;
+  width: 300px;
+  height: 400px;
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  position: relative;
+  transition: ease-in-out 0.4s all;
+  box-shadow: 1px 3px 8px 0px black;
+  -webkit-transition: ease-in-out 0.4s all;
+  -moz-transition: ease-in-out 0.4s all;
+  -ms-transition: ease-in-out 0.4s all;
+  -o-transition: ease-in-out 0.4s all;
+}
+
+.container:hover {
+  box-shadow: 2px 5px 15px 0px black;
+}
+
+.surah-cover {
+  width: 210px;
+  height: 250px;
+  background-image: url(/img/quran.jpg);
+  background-size: cover;
+  position: relative;
+  top: -40px;
+  border-radius: 14px;
+  box-shadow: 0px 5px 10px -2px black;
+  transition: 0.2s ease-in-out all;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+  -webkit-transition: 0.2s ease-in-out all;
+  -moz-transition: 0.2s ease-in-out all;
+  -ms-transition: 0.2s ease-in-out all;
+  -o-transition: 0.2s ease-in-out all;
+}
+
+.surah-cover:hover {
+  box-shadow: 1px 8px 16px -2px black;
+}
+
+.timeline {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#progress {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+}
+
+.duration {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 5px 0px;
+  font-family: "Ubuntu", sans-serif;
+}
+.players {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 50px;
+}
+
+.player {
+  font-size: 40px;
+  color: rgb(80, 80, 80);
+  cursor: pointer;
+  border: 0px;
+  background-color: white;
+}
+
+div#favUserSuwar {
+  padding-top: 100px;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  overflow-y: hidden;
+  position: absolute;
+  right: 0;
+  z-index: 50;
+  background-color: #333;
+  border-left: 4px solid violet;
+}
+
+div#favUserSuwar h2 {
+  color: #215df4;
+  font-size: 18px;
+  padding: 0px 10px;
+  text-align: center;
+}
+
+div#favUserSuwar img {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  width: 80px;
+}
+
+.favorites {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  background: rgb(0, 0, 0);
+  color: red;
+  z-index: 200;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.surahReciter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -15px;
+}
+
+#reciter {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+
+#surah {
+  font-size: 25px;
+  color: black;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bolder;
+}
+
+.special-btns {
+  display: flex;
+  color: #4d59ffde;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+.both {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.checked {
+  color: orange;
+}
+
+#confirm-download {
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  z-index: 5;
+  font-size: 15px;
+  padding: 10px;
+  background: black;
+  width: 250px;
+  height: 150px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+}
+
+#confirm-download div {
+  margin-top: 20px;
+}
+
+#confirm-download div h2 {
+  font-size: 15px;
+}
+
+.yoRno {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.yoRno button {
+  cursor: pointer;
+  width: 30%;
+  padding: 10px;
+  color: black;
+  border: 0px;
+  background-color: lightblue;
+  border-radius: 18px;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  -ms-border-radius: 18px;
+  -o-border-radius: 18px;
+}
+
+.none {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.favIcons {
+  width: 280px;
+  animation: widthly 1s ease-in-out;
+  -webkit-animation: widthly 1s ease-in-out;
+}
+
+.closeIcons {
+  width: 0px;
+  animation: closely 1s ease-in-out;
+  -webkit-animation: closely 1s ease-in-out;
+}
+
+@keyframes widthly {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 280px;
+  }
+}
+
+@keyframes closely {
+  0% {
+    width: 280px;
+  }
+  100% {
+    width: 0px;
+  }
+}
